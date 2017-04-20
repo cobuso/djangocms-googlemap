@@ -87,7 +87,7 @@ class GoogleMapMarkerPlugin(CMSPluginBase):
     ]
 
     def get_render_template(self, context, instance, placeholder):
-        return 'djangocms_googlemap/{}/marker.html'.format(context['googlemap_template'])
+        return 'djangocms_googlemap/{}/marker.html'.format(context.get('googlemap_template', 'default'))
 
 
 class GoogleMapRoutePlugin(CMSPluginBase):
